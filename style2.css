@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('space.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#spaceship {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 20vw;
+    height: auto;
+    max-width: 80vw;
+    animation: spaceshipAnimation 3s ease-in-out infinite;
+}
+
+#done {
+    position: fixed;
+    top: 45%;
+    left: 30%;
+    width: 40vw;
+    height: auto;
+    max-width: 80vw;
+    animation: spaceshipAnimation 2s ease-in-out infinite;
+    transition: opacity 3s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes spaceshipAnimation {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+}
+
+.wish {
+    text-align: center;
+    /* background-color: #8a2be2;  */
+    padding: 5vw;
+    border-radius: 5vw;
+    box-sizing: border-box;
+    max-width: 70vw; 
+    font-size: 3vw;
+    background-color: rgba(46, 0, 58, 0.5);
+    border: 0.5vw solid #fff;
+    transition: opacity 1s ease-out;
+}
+
+.wish p {
+    color: #fff;
+    margin: 0;
+    font-family: 'Papyrus', fantasy;
+    font-weight: 1000;
+}
+
+#wish-Input {
+    width: 90%; 
+    padding: 2vw; 
+    margin-top: 2vw; 
+    font-size: 2vw;
+    font-family: 'Papyrus', fantasy;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    border-color: transparent;
+}
+
+button {
+    background-color: #4caf50; 
+    color: white;
+    padding: 2vw 4vw; 
+    border: none;
+    border-radius: 2vw; 
+    cursor: pointer;
+    font-size: 2vw;
+    font-family: 'Papyrus', fantasy;
+    font-weight: 800;
+    margin: 2vw;
+}
+
+@keyframes spaceshipFlyAway {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(100vw, -50%);
+    }
+}
